@@ -1,0 +1,15 @@
+#Carousel {
+    width: 825px;
+    margin: 0 auto 2em;
+
+}
+#Events {
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+#Events #eventContainer {
+  width: 31%;
+  margin: 0 auto;
+}

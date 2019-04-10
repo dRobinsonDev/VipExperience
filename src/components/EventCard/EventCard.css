@@ -1,0 +1,27 @@
+#eventContainer > div.card:hover {
+    transform: scale(1.1);
+    border: 2px solid rgba(51,58,64,1);
+}
+
+.card {
+    margin: 0.925em !important;
+    width: 100% !important;
+    height: 375px !important;
+    align-items: center;
+}
+.card-img-top {
+    width: 90%;
+    padding: 0.925em;
+}
+.card-body {
+    width: 100% !important;
+    margin-top: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.card-text {
+    padding: 0 0.925em;
+    text-align: justify;
+}
