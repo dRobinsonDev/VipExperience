@@ -5,8 +5,7 @@ import AccountPage from '../AccountPage/AccountPage';
 import EventsPage from '../EventsPage/EventsPage';
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
-import SimpleCartPage from '../SimpleCartPage/SimpleCartPage';
-import userService from '../../utils/userService';
+import userService from '../utils/userService';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -14,7 +13,6 @@ class App extends Component {
   constructor() {
     super();
     this.state = {...this.getInitialState()};
-    window.setState = this.setState.bind(this);
   }
 
   getInitialState() {
