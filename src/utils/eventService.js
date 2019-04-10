@@ -17,10 +17,9 @@ function currentEvents(data) {
 
 function getEvent(id) {
 
-  return fetch(`${BASE_URL}classificationName=music&apikey={process.env.API_KEY}`, {mode: 'no-cors'})
-  .then(function(response) {
-    return response.json();
+  return fetch('https://app.ticketmaster.com/discovery/v2/events/' + id + '?classificationName=music&apikey=5hnzA3LUAno10MS6fbrBCr45Gk2APEoZ',options)
+  .then(res=> {
+    if (res.ok) return res.json();
   })
-  .then(function(myJson) {
-  });
+  .then(data => data);
 }

@@ -47,6 +47,9 @@ export default class HeaderNav extends React.Component {
               </NavItem>
 
               <NavItem>
+                <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Cart">My Cart</NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/About">About</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>

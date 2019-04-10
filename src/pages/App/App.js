@@ -5,8 +5,9 @@ import AccountPage from '../AccountPage/AccountPage';
 import EventsPage from '../EventsPage/EventsPage';
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
+import SimpleCartPage from '../SimpleCartPage/SimpleCartPage';
 import userService from '../../utils/userService';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 class App extends Component {
@@ -77,6 +78,10 @@ class App extends Component {
             />
             : 
             <Redirect to='/login' />
+          }/>
+           <Route exact path='/Cart' render={() => 
+              <h1>Cart Placeholder</h1>
+
           }/>
         </Switch>
       </div>
