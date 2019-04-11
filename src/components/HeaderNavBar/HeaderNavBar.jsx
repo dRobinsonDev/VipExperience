@@ -36,9 +36,9 @@ export default class HeaderNav extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink tag={RRNavLink} onClick={this.toggle} exact to="/Services/">Our Services</NavLink>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Signup">Signup</NavLink>
               </NavItem>
@@ -46,27 +46,34 @@ export default class HeaderNav extends React.Component {
                 <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Login">Login</NavLink>
               </NavItem>
 
-              <NavItem>
+             {this.props.user &&  <NavItem>
                 <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Cart">My Cart</NavLink>
-              </NavItem>
+             </NavItem> }
               <NavItem>
                 <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/About">About</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Contact Us
+                  Our Services
                 </DropdownToggle>
                 <DropdownMenu onClick={this.toggle} right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
+                 
+                  <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Services#vehicles">
+                    <DropdownItem>
+                    VIP Vehicles
+                    </DropdownItem>
+                  </NavLink>
+                  <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Services#perks">
+                    <DropdownItem>
+                    VIP Perks
+                    </DropdownItem>
+                  </NavLink>
                   <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
+                  <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Services#parties">
+                    <DropdownItem>
+                    VIP Parties
+                    </DropdownItem>
+                  </NavLink>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>

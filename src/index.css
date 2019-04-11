@@ -10,8 +10,6 @@ body {
 }
 body.modal-open {
   overflow: hidden !important;
-  position: fixed;
-
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -41,12 +39,4 @@ button:focus, .btn:focus {
   text-align: center;
 }
 
-/* #Events {
-  display: flex;
-  flex-flow: row wrap;
-}
-#Events #eventContainer {
-  width: 31%;
-  margin: 0 auto;
-} */
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect, Route, Switch  } from 'react-router-dom';
 import HeaderNavBar from '../../components/HeaderNavBar/HeaderNavBar';
 import AccountPage from '../AccountPage/AccountPage';
+import AboutPage from '../AboutPage/AboutPage';
 import EventsPage from '../EventsPage/EventsPage';
 import LoginPage from '../LoginPage/LoginPage';
 import SignupPage from '../SignupPage/SignupPage';
@@ -77,8 +78,12 @@ class App extends Component {
             : 
             <Redirect to='/login' />
           }/>
-           <Route exact path='/Cart' render={() => 
+          <Route exact path='/Cart' render={() => 
               <h1>Cart Placeholder</h1>
+
+          }/>
+          <Route exact path='/About' render={() => 
+             <AboutPage />
 
           }/>
         </Switch>

@@ -6,6 +6,7 @@
 #Events {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   width: 90%;
   margin: 0 auto;
 }

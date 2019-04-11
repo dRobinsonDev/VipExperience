@@ -29,7 +29,6 @@ const items = [
     subCaption:''
 
   },
-
 ];
 
 class MyCarousel extends Component {
