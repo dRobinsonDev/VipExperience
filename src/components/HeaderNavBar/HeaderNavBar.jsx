@@ -31,14 +31,11 @@ export default class HeaderNav extends React.Component {
   render(props) {
     return (
       <div className="HeaderNav">
-        <Navbar color="dark" dark expand="md">
+        <Navbar color="light" light expand="md">
           <NavLink tag={RRNavLink} exact to="/" activeClassName="active">Events</NavLink>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              {/* <NavItem>
-                <NavLink tag={RRNavLink} onClick={this.toggle} exact to="/Services/">Our Services</NavLink>
-              </NavItem> */}
               <NavItem>
                 <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Signup">Signup</NavLink>
               </NavItem>
@@ -58,20 +55,15 @@ export default class HeaderNav extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu onClick={this.toggle} right>
                  
-                  <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Services#vehicles">
+                  <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Services/Vehicles">
                     <DropdownItem>
                     VIP Vehicles
                     </DropdownItem>
                   </NavLink>
-                  <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Services#perks">
+                  <DropdownItem divider />
+                  <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Services/Perks">
                     <DropdownItem>
                     VIP Perks
-                    </DropdownItem>
-                  </NavLink>
-                  <DropdownItem divider />
-                  <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Services#parties">
-                    <DropdownItem>
-                    VIP Parties
                     </DropdownItem>
                   </NavLink>
                 </DropdownMenu>

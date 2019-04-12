@@ -6,12 +6,15 @@
 .card {
     margin: 0.925em !important;
     width: 100% !important;
-    height: 375px !important;
+    height: 400px !important;
     align-items: center;
 }
 .card-img-top {
     width: 90%;
     padding: 0.925em;
+}
+.card-title {
+    font-size: 1em;
 }
 .card-body {
     width: 100% !important;

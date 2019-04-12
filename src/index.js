@@ -6,7 +6,9 @@ import App from './pages/App/App';
 import './index.css';
 
 ReactDOM.render(
-  <Router><Route component={App}/></Router>,
+  <Router>
+    <Route component={App}/>
+  </Router>,
   document.getElementById('root')
 );
 
