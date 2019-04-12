@@ -5,6 +5,7 @@
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "bootstrap": "^4.3.1",
+    "bcrypt": "*",
     "crypto": "^1.0.1",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
