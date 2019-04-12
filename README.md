@@ -6,6 +6,6 @@
 
 ##
 
-## Tecnologies Used
+## Technologies Used
 
 ## Icebox
