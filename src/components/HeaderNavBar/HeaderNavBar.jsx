@@ -43,9 +43,6 @@ export default class HeaderNav extends React.Component {
                 <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Login">Login</NavLink>
               </NavItem>
 
-             {this.props.user &&  <NavItem>
-                <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Cart">My Cart</NavLink>
-             </NavItem> }
               <NavItem>
                 <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/About">About</NavLink>
               </NavItem>
@@ -54,7 +51,6 @@ export default class HeaderNav extends React.Component {
                   Our Services
                 </DropdownToggle>
                 <DropdownMenu onClick={this.toggle} right>
-                 
                   <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Services/Vehicles">
                     <DropdownItem>
                     VIP Vehicles
@@ -68,6 +64,13 @@ export default class HeaderNav extends React.Component {
                   </NavLink>
                 </DropdownMenu>
               </UncontrolledDropdown>
+             {this.props.user &&  
+             <NavItem>
+                <NavLink onClick={this.toggle} tag={RRNavLink} exact to="/Cart">My Cart</NavLink>
+             </NavItem> }
+             <NavItem > 
+              < NavLink onClick={this.toggle} tag={RRNavLink} exact to="/">Logout</NavLink>
+             </NavItem> 
             </Nav>
           </Collapse>
         </Navbar>
