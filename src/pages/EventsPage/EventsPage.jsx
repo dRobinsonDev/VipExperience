@@ -1,7 +1,7 @@
 import React from 'react';
 import EventCard from '../../components/EventCard/EventCard';
 import EventModal from '../../components/EventModal/EventModal';
-import EventService from '../utils/eventService';
+import EventService from '../../utils/eventService';
 import MyCarousel from '../../components/Carousel/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './EventsPage.css'

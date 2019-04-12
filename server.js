@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/events', require('./routes/api/events'));
 app.use(require('./config/auth'));
 
 app.get('/*', function(req, res){

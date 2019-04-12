@@ -28,3 +28,8 @@
     padding: 0 0.925em;
     text-align: justify;
 }
+.flex-event {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}

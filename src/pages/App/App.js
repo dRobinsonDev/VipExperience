@@ -7,7 +7,7 @@ import EventsPage from '../EventsPage/EventsPage';
 import LoginPage from '../LoginPage/LoginPage';
 import VehiclesPage from '../VehiclesPage/VehiclesPage';
 import SignupPage from '../SignupPage/SignupPage';
-import userService from '../utils/userService';
+import userService from '../../utils/userService';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
