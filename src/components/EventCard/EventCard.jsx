@@ -3,7 +3,6 @@ import TimeUtility from '../../utils/TimeUtility';
 import './EventCard.css';
 
 const EventCard = (props) => {
-  console.log('PROPS ', props)
     return (
         props.events.sort((a,b) => {
           return new Date(a.dates.start.localDate) - new Date(b.dates.start.localDate)
