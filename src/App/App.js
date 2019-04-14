@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { Route, Switch  } from 'react-router-dom';
-import HeaderNavBar from './components/HeaderNavBar/HeaderNavBar';
-import AboutPage from './Pages/AboutPage/AboutPage';
-import EventsPage from './Pages/EventsPage/EventsPage';
-import LoginPage from './Pages/LoginPage/LoginPage';
-import Products from './components/Shop/ProductList';
-import ShopPage from './Pages/ShopPage/ShopPage';
-import SignupPage from './Pages/SignupPage/SignupPage';
-import Cart from './components/Shop/Cart';
-import Checkout from './components/Shop/Checkout';
-import userService from './utils/userService';
+import HeaderNavBar from '../components/HeaderNavBar/HeaderNavBar';
+import AboutPage from '../Pages/AboutPage/AboutPage';
+import EventsPage from '../Pages/EventsPage/EventsPage';
+import LoginPage from '../Pages/LoginPage/LoginPage';
+import ShopPage from '../Pages/ShopPage/ShopPage';
+import SignupPage from '../Pages/SignupPage/SignupPage';
+import userService from '../utils/userService';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
