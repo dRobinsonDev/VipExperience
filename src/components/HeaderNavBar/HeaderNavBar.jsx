@@ -10,7 +10,6 @@ import {
 } from 'reactstrap';
 import './HeaderNavBar.css';
 
-
 export default class HeaderNav extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +26,7 @@ export default class HeaderNav extends React.Component {
   render(props) {
     return (
       <div className="HeaderNav">
-        <Navbar color="light" light expand="md">
+        <Navbar className="navColor" expand="md">
           <NavLink tag={RRNavLink} exact to="/" activeClassName="active">Events</NavLink>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -56,7 +55,6 @@ export default class HeaderNav extends React.Component {
               <NavItem> 
                 < NavLink onClick={this.toggle} tag={RRNavLink} exact to="/">Logout</NavLink>
               </NavItem> }
-
             </Nav>
           </Collapse>
         </Navbar>

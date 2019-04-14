@@ -2,7 +2,6 @@ module.exports = {
   currentEvents,
   getEvent
 }
-const BASE_URL = "https://app.ticketmaster.com/discovery/v2/events";
 
 const options = {
   mode: 'cors'

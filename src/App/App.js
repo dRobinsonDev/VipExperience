@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import { Redirect, Route, Switch  } from 'react-router-dom';
-import HeaderNavBar from '../../components/HeaderNavBar/HeaderNavBar';
-import AccountPage from '../AccountPage/AccountPage';
-import AboutPage from '../AboutPage/AboutPage';
-import EventsPage from '../EventsPage/EventsPage';
-import LoginPage from '../LoginPage/LoginPage';
-import VehiclesPage from '../VehiclesPage/VehiclesPage';
-import SignupPage from '../SignupPage/SignupPage';
-import userService from '../../utils/userService';
+import { Route, Switch  } from 'react-router-dom';
+import HeaderNavBar from '../components/HeaderNavBar/HeaderNavBar';
+import AboutPage from '../Pages/AboutPage/AboutPage';
+import EventsPage from '../Pages/EventsPage/EventsPage';
+import LoginPage from '../Pages/LoginPage/LoginPage';
+import Products from '../components/Shop/ProductList';
+import ShopPage from '../Pages/ShopPage/ShopPage';
+import SignupPage from '../Pages/SignupPage/SignupPage';
+import Cart from '../components/Shop/Cart';
+import Checkout from '../components/Shop/Checkout';
+import userService from '../utils/userService';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -25,12 +27,6 @@ class App extends Component {
     };
   }
 
-
-  /*--- Callback Methods ---*/
-  getUserLocation() {
-
-  }
-
   handleCartUpdate = (cart) => {
     this.setState({ simpleCart: cart });
   }
@@ -42,15 +38,11 @@ class App extends Component {
 
   handleSignupOrLogin = () => {
     this.setState({user: userService.getUser()});
-    console.log('USER IS ',this.state.user)
   }
-
-  /*--- Lifecycle Methods ---*/
 
   async componentDidMount() {
     const user = userService.getUser();
     this.setState({user})
-    console.log(this.state);
   }
 
   render() {
@@ -75,23 +67,15 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
-          <Route exact path='/account' render={() => 
-         this.state.user ? 
-            <AccountPage
-            />
-            : 
-            <Redirect to='/login' />
-          }/>
-          <Route exact path='/Cart' render={() => 
-              <h1>Cart Placeholder</h1>
+          <Route exact path='/Services' render={() => 
+              <ShopPage />
 
           }/>
+          <Route exact path="/Products" component={Products} />
+          <Route exact path="/Cart" component={Cart} />
+          <Route exact path="/Checkout" component={Checkout} />
           <Route exact path='/About' render={() => 
              <AboutPage />
-
-          }/>
-          <Route exact path='/Services/Vehicles' render={() => 
-             <VehiclesPage />
           }/>
         </Switch>
       </div>

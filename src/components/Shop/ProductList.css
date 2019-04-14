@@ -1,0 +1,16 @@
+.productListContainer {
+    display: flex;
+    flex-flow: row wrap;
+}
+.clear-both {
+    margin: auto;
+}
+.linkContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+}
+.linkContainer a {
+    margin: 0 auto;
+}

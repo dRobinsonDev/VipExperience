@@ -98,5 +98,4 @@ class MyCarousel extends Component {
   }
 }
 
-
 export default MyCarousel;

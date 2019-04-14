@@ -21,12 +21,10 @@ export default class EventsPage extends React.Component {
     }   
 
     eventModal = (id) => {
-        console.log('id ', id)
         EventService.getEvent(id)
-        .then(data => {
-            this.setState({modalChildren:data});
+        .then(async (data) => {
+            await this.setState({modalChildren:data});
         });
-        console.log('chillin ', this.state);
         this.showModal();
     }
 
@@ -51,10 +49,9 @@ export default class EventsPage extends React.Component {
             </div>
             <div id="Events">
                 {this.state.events && <EventCard {...this.state} eventModal={this.eventModal} /> }
-                <EventModal showModal={this.state.showModal} handleClose={this.hideModal} modalBody={this.state.modalChildren} />
+                {this.state.modalChildren && <EventModal showModal={this.state.showModal} handleClose={this.hideModal} modalBody={this.state.modalChildren} /> }
             </div>
         </>
         )
     }
 }
- 
