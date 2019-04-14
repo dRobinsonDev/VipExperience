@@ -25,7 +25,6 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use('/api/users', require('./routes/api/users'));
 
 app.get('/api/products', (req, res) => {
-    console.log('pro ', data.products);
     return res.json(data.products);
   });
   

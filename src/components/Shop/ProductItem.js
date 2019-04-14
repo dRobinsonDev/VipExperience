@@ -28,16 +28,12 @@ export default class ProductItem extends React.Component {
 			  <div className="card-body">
 			    <h4 className="card-title">{product.name}</h4>
 			    <p className="card-text">{product.description}</p>
-		{product.type === "Vehicle" && <h5 className="card-text"><small>price: </small>${product.price} per hour</h5> }
-		{product.type !== "Vehicle" && <h5 className="card-text"><small>price: </small>${product.price}</h5> }
-			    
-			    { product.available_quantity > 0 ?
+					{product.type === "Vehicle" && <h5 className="card-text"><small>price: </small>${product.price} per hour</h5> }
+					{product.type !== "Vehicle" && <h5 className="card-text"><small>price: </small>${product.price}</h5> }
 			    	<div>
 			    		<button className="btn btn-sm btn-warning float-right" onClick={this.addToCart}>Add to cart</button>
 			    		<input type="number" value={this.state.quantity} name="quantity" onChange={this.handleInputChange} className="float-right" style={{ width: "60px", marginRight: "10px", borderRadius: "3px"}}/>
-			    	</div> : 
-			    	<p className="text-danger"> product is out of stock </p>
-					}
+			    	</div> 
 			  </div>
 			</div>
 			</div>
