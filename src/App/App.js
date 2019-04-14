@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Route, Switch  } from 'react-router-dom';
 import HeaderNavBar from '../components/HeaderNavBar/HeaderNavBar';
-import AboutPage from '../Pages/AboutPage/AboutPage';
-import EventsPage from '../Pages/EventsPage/EventsPage';
-import LoginPage from '../Pages/LoginPage/LoginPage';
-import ShopPage from '../Pages/ShopPage/ShopPage';
-import SignupPage from '../Pages/SignupPage/SignupPage';
+import AboutPage from '../pages/AboutPage/AboutPage';
+import EventsPage from '../pages/EventsPage/EventsPage';
+import LoginPage from '../pages/LoginPage/LoginPage';
+import ShopPage from '../pages/ShopPage/ShopPage';
+import SignupPage from '../pages/SignupPage/SignupPage';
 import userService from '../utils/userService';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

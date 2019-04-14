@@ -19,7 +19,7 @@ const EventCard = (props) => {
                 </div>
               </div>
               <div className="flex-event">
-                <button onClick={() => props.eventModal(event.id)} className="btn btn-primary">More Info...</button> &nbsp; &nbsp;
+                <button onClick={() => props.eventModal(event.id)} className="btn btn-primary">Buy Tickets</button> &nbsp; &nbsp;
                 <button  className="btn btn-primary">Buy Tickets</button>
               </div>
             </div>
