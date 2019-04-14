@@ -5,8 +5,8 @@ import AccountPage from '../AccountPage/AccountPage';
 import AboutPage from '../AboutPage/AboutPage';
 import EventsPage from '../EventsPage/EventsPage';
 import LoginPage from '../LoginPage/LoginPage';
+import VehiclesPage from '../VehiclesPage/VehiclesPage';
 import SignupPage from '../SignupPage/SignupPage';
-import ShopPage from '../ShopPage/ShopPage';
 import userService from '../../utils/userService';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -42,6 +42,7 @@ class App extends Component {
 
   handleSignupOrLogin = () => {
     this.setState({user: userService.getUser()});
+    console.log('USER IS ',this.state.user)
   }
 
   /*--- Lifecycle Methods ---*/
@@ -49,6 +50,7 @@ class App extends Component {
   async componentDidMount() {
     const user = userService.getUser();
     this.setState({user})
+    console.log(this.state);
   }
 
   render() {
@@ -80,13 +82,16 @@ class App extends Component {
             : 
             <Redirect to='/login' />
           }/>
-          <Route exact path='/Services' render={() => 
-              <ShopPage />
+          <Route exact path='/Cart' render={() => 
+              <h1>Cart Placeholder</h1>
 
           }/>
           <Route exact path='/About' render={() => 
              <AboutPage />
 
+          }/>
+          <Route exact path='/Services/Vehicles' render={() => 
+             <VehiclesPage />
           }/>
         </Switch>
       </div>

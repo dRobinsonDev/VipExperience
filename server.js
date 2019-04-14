@@ -2,14 +2,9 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
-const cors = require('cors');
-const bodyParser = require('body-parser');
+
 
 const app = express();
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
 
 require('dotenv').config();
 require('./config/database');
