@@ -28,7 +28,8 @@ export default class ProductItem extends React.Component {
 			  <div className="card-body">
 			    <h4 className="card-title">{product.name}</h4>
 			    <p className="card-text">{product.description}</p>
-			    <h5 className="card-text"><small>price: </small>${product.price} per hour</h5>
+		{product.type == "Vehicle" && <h5 className="card-text"><small>price: </small>${product.price} per hour</h5> }
+		{product.type !== "Vehicle" && <h5 className="card-text"><small>price: </small>${product.price}</h5> }
 			    
 			    { product.available_quantity > 0 ?
 			    	<div>

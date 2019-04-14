@@ -69,11 +69,10 @@ class App extends Component {
           }/>
           <Route exact path='/Services' render={() => 
               <ShopPage />
-
           }/>
-          <Route exact path="/Products" component={Products} />
-          <Route exact path="/Cart" component={Cart} />
-          <Route exact path="/Checkout" component={Checkout} />
+          <Route exact path="/Products" component={ShopPage} />
+          <Route exact path="/Cart" component={ShopPage} />
+          <Route exact path="/Checkout" component={ShopPage} />
           <Route exact path='/About' render={() => 
              <AboutPage />
           }/>
