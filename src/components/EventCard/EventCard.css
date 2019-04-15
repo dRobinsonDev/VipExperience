@@ -1,28 +1,3 @@
-.card {
-    margin: 0.925em !important;
-    width: 100% !important;
-    height: 400px !important;
-    align-items: center;
-}
-.card-body {
-    width: 100% !important;
-    margin-top: auto;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-}
-.card-img-top {
-    width: 90%;
-    padding: 0.925em;
-}
-.card-text {
-    padding: 0 0.925em;
-    text-align: justify;
-}
-.card-title {
-    font-size: 1em;
-}
 #eventContainer > div.card:hover {
     transform: scale(1.1);
     border: 2px solid rgba(51,58,64,1);

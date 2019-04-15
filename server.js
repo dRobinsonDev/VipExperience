@@ -21,25 +21,23 @@ app.use(express.json());
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
-
 app.use('/api/users', require('./routes/api/users'));
 
 app.get('/api/products', (req, res) => {
     return res.json(data.products);
-  });
-  
+});  
 app.post('/api/products', (req, res) => {
 let products = [], id = null;
 let cart = JSON.parse(req.body.cart);
-if (!cart) return res.json(products)
-for (var i = 0; i < data.products.length; i++) {
-    id = data.products[i].id.toString();
-    if (cart.hasOwnProperty(id)) {
-    data.products[i].qty = cart[id]
-    products.push(data.products[i]);
+    if (!cart) return res.json(products)
+    for (var i = 0; i < data.products.length; i++) {
+        id = data.products[i].id.toString();
+        if (cart.hasOwnProperty(id)) {
+        data.products[i].qty = cart[id]
+        products.push(data.products[i]);
+        }
     }
-}
-return res.json(products);
+    return res.json(products);
 });
 
 app.use(require('./config/auth'));

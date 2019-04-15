@@ -43,6 +43,7 @@ export default class EventCard extends React.Component {
                 <p className="card-text">Date: {event.dates.start.localDate} </p>
                 <p className="card-text">Time: {TimeUtility(event.dates.start.localTime)} </p>
               </div>
+              <p>Price: $200 a ticket</p>
             </div>
             <div className="flex-event">
               <button onClick={() =>this.addToCart(event, this.state[event.id] )} className="btn btn-primary">Buy A Ticket</button> &nbsp; &nbsp;

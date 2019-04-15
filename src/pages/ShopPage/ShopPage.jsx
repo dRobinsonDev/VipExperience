@@ -3,13 +3,11 @@ import React, { Component } from 'react';
 import Cart from '../../components/Shop/Cart';
 import Checkout from '../../components/Shop/Checkout';
 import Products from '../../components/Shop/ProductList';
-import { isAuthenticated } from '../../repository';
 import './ShopPage.css'
 
 class ShopPage extends Component {
  
   render() {
-    const auth = isAuthenticated();
     return (
       <Router>
         <div>
@@ -23,7 +21,6 @@ class ShopPage extends Component {
                 <div className="navbar-nav">
                   <Link className="nav-item nav-link" to="/Products">Products</Link>
                   <Link className="nav-item nav-link" to="/Cart">Cart</Link>
-                  { (auth) ? <Link className="nav-item nav-link" to="/checkout">Checkout</Link>: ''}
                 </div>
               </div>
             </div>

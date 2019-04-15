@@ -6,30 +6,10 @@
     width: 31%;
     margin: 0 auto;
 }
-.card {
-    margin: 0.925em !important;
-    height: 400px !important;
-    align-items: center;
-}
 .card-img-top {
     width: 100%;
     height: 200px;
     padding: 0.925em;
-}
-.card-title {
-    font-size: 1em;
-}
-.card-body {
-    width: 100% !important;
-    margin-top: auto;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-}
-.card-text {
-    padding: 0 0.925em;
-    text-align: justify;
 }
 .flex-event {
     display: flex;

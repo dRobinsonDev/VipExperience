@@ -1,6 +1,6 @@
 import React from 'react';
-import { isAuthenticated, getCartItems } from '../../repository';
-import {  Redirect, Link } from 'react-router-dom';
+import {  getCartItems } from '../../repository';
+import { Link } from 'react-router-dom';
 
 export default class Checkout extends React.Component {
 	constructor(props) {
@@ -24,14 +24,14 @@ export default class Checkout extends React.Component {
 	}
 
 	render() {
-		if (!isAuthenticated()) return (<Redirect to="/login" />);
 		const { products, total } =  this.state;
 		return (
-			<div className=" container">
+			<div className="container cart">
 				<h3 className="card-title">Checkout</h3>
 				<hr/>
 				{
 					products.map((product, index) => 
+					<div className="card cart-item flex flexCol" style={{ marginBottom: "10px"}}>
 						<div key={index}>
 							<p>
 								{product.name} 
@@ -39,13 +39,16 @@ export default class Checkout extends React.Component {
 								<span className="float-right text-primary">${product.qty * product.price}</span>
 							</p><hr/>
 						</div>
+					</div>
 					)
 				}
 				<hr/>
-				{ products.length ? <div><h4><small>Total Amount:</small><span className="float-right text-primary">${total}</span></h4><hr/></div>: ''}
+				{ products.length ? <div className="text-center full-width"><h4><small>Total Amount:</small><span className="float-right text-primary">${total}</span></h4><hr/></div>: ''}
 				{ !products.length ? <h3 className="text-warning">No item on the cart</h3>: ''}
-				{ products.length ? <button className="btn btn-success float-right" onClick={() => alert('Proceed to Pay')}>Pay</button>: '' }
-				<Link to="/"><button className="btn btn-danger float-right" style={{ marginRight: "10px" }}>Cancel</button></Link>
+				<div className="flex flexRow">
+					{ products.length ? <button className="btn btn-success float-right" onClick={() => alert('Proceed to Pay')}>Pay</button>: '' }
+					<Link to="/"><button className="btn btn-danger float-right" style={{ marginRight: "10px" }}>Cancel</button></Link>
+				</div>
 				<br/><br/><br/>
 			</div>
 		);

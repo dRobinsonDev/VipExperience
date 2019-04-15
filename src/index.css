@@ -15,21 +15,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 .flex-h {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .align-flex-end {
   align-items: flex-end;
 }
-
 button:focus, .btn:focus {
   outline: none;
 }
-
 .header-footer {
   height: 50px;
   padding: 10px;
@@ -38,7 +34,58 @@ button:focus, .btn:focus {
   font-size: 18px;
   text-align: center;
 }
-
+/*  UNIVERSAL CSS */
+.flex {
+  display: flex;
+}
+.flexCol {
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;    
+  width: 100%;
+}
+.flexRow {
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.flexRow button {
+  margin: 0 2em;
+}
+.card {
+  margin: 0.925em !important;
+  width: 100% !important;
+  height: 400px !important;
+  align-items: center;
+}
+.card-body {
+  width: 100% !important;
+  margin-top: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.card-img-top {
+  width: 90%;
+  padding: 0.925em;
+}
+.card-text {
+  padding: 0 0.925em;
+  text-align: justify;
+}
+.card-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+}
+.cart-item {
+  width: 90%;
+  height: 150px !important;
+}
 .fullWidth {
   width: 100%;
 }
+/* .form-wrapper {
+  background-color: darkgray;
+} */
+/*todo style login signup form  */

@@ -15,7 +15,6 @@ function currentEvents(data) {
 }
 
 function getEvent(id) {
-
   return fetch('https://app.ticketmaster.com/discovery/v2/events/' + id + '?classificationName=music&apikey=5hnzA3LUAno10MS6fbrBCr45Gk2APEoZ',options)
   .then(res=> {
     if (res.ok) return res.json();

@@ -30,7 +30,7 @@ export default class ProductList extends React.Component {
 				<br/><br/><br/>
 				<hr/>
 				{
-						products && 	products.map((product, index) => <ProductItem product={product} key={index}/>)
+					products &&  products.map((product, index) => <ProductItem product={product} key={index}/>)
 				}
 				<hr/>
 			</div>

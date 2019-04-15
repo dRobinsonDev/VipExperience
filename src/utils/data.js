@@ -6,9 +6,7 @@ const products = [
       description: 'Elegant White Limousine',
       image: 'images/vehicles/limousine1.jpeg',
       type: 'Vehicle'
-  
     },
-  
     {
       id: '02',
       name: 'Stretch Limo',
@@ -43,7 +41,6 @@ const products = [
       image: 'images/Vehicles/limousine2.jpeg',
       type: 'Vehicle'
     },
-  
     {
       id: '06',
       name: 'White Limo Hummer',
@@ -59,9 +56,7 @@ const products = [
       description: 'Black Mega party bus that meets all your needs.',
       image: 'images/Vehicles/partybus1.jpeg',
       type: 'Vehicle'
-  
     },
-  
     {
       id: '08',
       name: 'White Party Bus',
@@ -70,7 +65,6 @@ const products = [
       image: 'images/Vehicles/partybus2.jpeg',
       type: 'Vehicle'
     },
-    
     {
       id: '09',
       name: 'Small Bottle Service Package',
@@ -87,7 +81,6 @@ const products = [
       image: 'images/Perks/bottle_service1.jpeg',
       type: 'Perk'
     },
-  
     {
       id: '11',
       name: 'Premium Deluxe Party Bottle Service',
@@ -96,7 +89,6 @@ const products = [
       image: 'images/Perks/bottle_service2.jpeg',
       type: 'Perk'  
     },
-  
     {
       id: '12',
       name: 'Cuban Cigars',
@@ -113,7 +105,6 @@ const products = [
       image: 'images/Perks/cigars2.jpeg',
       type: 'Perk'
     },
-  
     {
       id: '14',
       name: 'American Cigars',

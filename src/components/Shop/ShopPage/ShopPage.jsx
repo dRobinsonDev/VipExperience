@@ -23,7 +23,7 @@ class ShopPage extends Component {
                 <div className="navbar-nav">
                   <Link className="nav-item nav-link" to="/Products">Products</Link>
                   <Link className="nav-item nav-link" to="/Cart">Cart</Link>
-                  { (auth) ? <Link className="nav-item nav-link" to="/checkout">Checkout</Link>: ''}
+                  <Link className="nav-item nav-link" to="/Checkout">Checkout</Link>
                 </div>
               </div>
         
