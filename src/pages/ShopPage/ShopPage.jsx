@@ -7,12 +7,7 @@ import { isAuthenticated } from '../../repository';
 import './ShopPage.css'
 
 class ShopPage extends Component {
-  state = {
-    route: Products
-  }
-  getSubRoute () {
-    return this.state.route
-  }
+ 
   render() {
     const auth = isAuthenticated();
     return (

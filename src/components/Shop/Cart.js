@@ -30,9 +30,13 @@ export default class Cart extends React.Component {
 
 	componentWillMount() {
 		let cart = localStorage.getItem('cart');
+		let tickets = localStorage.getItem('tickets');
+		let total = 0;
+		tickets = JSON.parse(tickets);
 		if (!cart) return; 
 		getCartItems(cart).then((products) => {
-			let total = 0;
+			let cartQty = localStorage.getItem('cart');
+
 			for (let i = 0; i < products.length; i++) {
 				total += products[i].price * products[i].qty;
 			}
@@ -41,16 +45,19 @@ export default class Cart extends React.Component {
 				let flag = false;
 				for (let j = 0; j < products.length; j++) {
 				  if ( products[j].id === cur)  {
-					  console.log('same');
 						flag = true;
 				  }
 				}
 				if (!flag) {
+					cartQty = JSON.parse(cartQty);
+					console.log('TICKS ', cartQty[`${cur}`]);
 					products[products.length] = {
 						id: cur,
+						name: tickets[cur],
 						price: 200,
-						qty: 2
+						qty: cartQty[`${cur}`]
 					}
+					total += 200 * cartQty[`${cur}`];
 				}
 			}
 			
