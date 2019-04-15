@@ -48,7 +48,7 @@ export default class EventsPage extends React.Component {
             <MyCarousel />
             </div>
             <div id="Events">
-                {this.state.events && <EventCard {...this.state} eventModal={this.eventModal} /> }
+                {this.state.events && <EventCard {...this.state} eventModal={this.eventModal} tickets={this.props.tickets}/> }
                 {this.state.modalChildren && <EventModal showModal={this.state.showModal} handleClose={this.hideModal} modalBody={this.state.modalChildren} /> }
             </div>
         </>

@@ -1,0 +1,24 @@
+.flex {
+    display: flex;
+}
+.flexCol {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;    
+    width: 100%;
+}
+.flexRow {
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.flexRow button {
+    margin: 0 2em;
+}
+.card-title {
+    width: 100%;
+    text-align: center;
+}
+.cart-item {
+    width: 90%;
+    height: 150px !important;
+}

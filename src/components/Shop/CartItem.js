@@ -12,7 +12,7 @@ export default class CartItem extends React.Component {
 	render(){
 		const { product } = this.props;
 		return (
-		    <div className="card cart-item" style={{ marginBottom: "10px"}}>
+		    <div className="card cart-item flex flexCol" style={{ marginBottom: "10px"}}>
 			  <div className="card-body">
 			    <h4 className="card-title">{product.name}</h4>
 			    <h5 className="card-text"><small>price: </small>${product.price}</h5>

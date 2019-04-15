@@ -27,7 +27,7 @@ export default class HeaderNav extends React.Component {
     return (
       <div className="HeaderNav">
         <Navbar className="navColor" expand="md">
-          <NavLink tag={RRNavLink} exact to="/" activeClassName="active">Events</NavLink>
+          <NavLink tag={RRNavLink} exact to="/" activeClassName="active">VIP EXPERIENCES</NavLink>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

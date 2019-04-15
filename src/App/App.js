@@ -19,7 +19,8 @@ class App extends Component {
     return {
       user: null,
       simpleCart: {},
-      loc: null
+      loc: null,
+      tickets: {}
     };
   }
 
@@ -46,10 +47,11 @@ class App extends Component {
       <div>
         <HeaderNavBar 
         user={this.state.user}
+        tickets={this.state.tickets}
         />
         <Switch>
-          <Route exact path='/' render={() =>
-          <EventsPage />
+          <Route exact path='/' render={(props) =>
+          <EventsPage  tickets={this.state.tickets} />
           }/>
           <Route exact path='/signup' render={({ history }) => 
             <SignupPage
@@ -63,11 +65,11 @@ class App extends Component {
               handleSignupOrLogin={this.handleSignupOrLogin}
             />
           }/>
-          <Route exact path='/Services' render={() => 
-              <ShopPage />
+          <Route exact path='/Services' render={(props) => 
+              <ShopPage tickets={this.state.tickets}/>
           }/>
           <Route exact path="/Products" component={ShopPage} />
-          <Route exact path="/Cart" component={ShopPage} />
+          <Route exact path="/Cart" render={ (props) => <ShopPage tickets={this.state.tickets} />} />
           <Route exact path="/Checkout" component={ShopPage} />
           <Route exact path='/About' render={() => 
              <AboutPage />

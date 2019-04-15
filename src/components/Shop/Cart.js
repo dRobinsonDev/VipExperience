@@ -2,12 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
 import { getCartItems } from '../../repository';
+import './Cart.css';
 
 export default class Cart extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			products: [],
+			
 			total: 0
 		}
 	}
@@ -31,11 +33,34 @@ export default class Cart extends React.Component {
 		if (!cart) return; 
 		getCartItems(cart).then((products) => {
 			let total = 0;
-			for (var i = 0; i < products.length; i++) {
+			for (let i = 0; i < products.length; i++) {
 				total += products[i].price * products[i].qty;
 			}
+			for ( let i = 0; i < cart.length; i++)  {
+				let cur = cart[i];
+				let flag = false;
+				for (let j = 0; j < products.length; j++) {
+				  if ( products[j].id === cur)  {
+					  console.log('same');
+						flag = true;
+				  }
+				}
+				if (!flag) {
+					products[products.length] = {
+						id: cur,
+						price: 200,
+						qty: 2
+					}
+				}
+			}
+			
 			this.setState({ products, total });
 		});
+		cart = JSON.parse(cart);
+		cart = Object.keys(cart);
+		console.log('cur ', cart);
+		
+		
 	}
 
 	render() {
@@ -48,11 +73,14 @@ export default class Cart extends React.Component {
 					products.map((product, index) => <CartItem product={product} remove={this.removeFromCart} key={index}/>)
 				}
 				<hr/>
-				{ products.length ? <div><h4><small>Total Amount:</small><span className="float-right text-primary">${total}</span></h4><hr/></div>: ''}
-
-				{ !products.length ? <h3 className="text-warning">No item on the cart</h3>: ''}
-				<Link to="/checkout"><button className="btn btn-success float-right">Checkout</button></Link>
-				<button className="btn btn-danger float-right" onClick={this.clearCart} style={{ marginRight: "10px" }}>Clear Cart</button>
+				<div className="flex flexCol">
+					{ products.length ? <div><h4><small>Total Amount:</small><span className="float-right text-primary">${total}</span></h4><hr/></div>: ''}
+					{ !products.length ? <h3 className="text-warning">No item on the cart</h3>: ''}
+					<div className="flex flexRow">
+						<Link to="/checkout"><button className="btn btn-success float-right">Checkout</button></Link>
+						<button className="btn btn-danger float-right" onClick={this.clearCart} style={{ marginRight: "10px" }}>Clear Cart</button>
+					</div>
+				</div>
 				<br/><br/><br/>
 			</div>
 		);
