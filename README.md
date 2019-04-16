@@ -2,9 +2,10 @@
 The idea behind VIP Experiences is to provide music lovers, in or visiting the Los Angeles area, with a custom VIP experience surrounding music concerts. Users will be able to purchase tickets  to concerts in Los Angeles and then go on to build their own custom VIP package including but not limited to: limo  rentals, party bus rentals, bottle service, cigars and much more!
 
 ## Screenshots 
-
-<img src="screens/screen1.png" alt="VIP Experiences Screenshot" width="240" height="180" border="10" />  
-<img src="screens/screen2.png" alt="VIP Experiences Screenshot" width="240" height="180" border="10" />  
+<div style="display:flex;justify-content:center;">
+    <img src="screens/screen1.png" alt="VIP Experiences Screenshot" width="240" height="180" s border="10" />  
+    <img src="screens/screen2.png" alt="VIP Experiences Screenshot" width="240" height="180" border="10" />  
+</div>
   
   
 ## Lessons Learned
