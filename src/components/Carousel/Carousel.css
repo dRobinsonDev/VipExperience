@@ -3,8 +3,9 @@
     height: 400px !important;
 }
 .carousel-caption {
-    color: blue;
-    text-shadow: white;
+    color: white;
     width: 100%;
     height: 100%;
+    left: 0 !important;
+    right: 0 !important;
 }

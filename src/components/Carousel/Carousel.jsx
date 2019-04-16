@@ -12,23 +12,30 @@ const items = [
   {
     src: "images/concert1.jpeg",
     altText: 'Feel like a VIP',
-    caption: 'Concerts in Style',
+    caption: 'Enjoy Concerts in Style',
     subCaption:''
   },
   {
-    src: "images/concert2.jpeg",
-    altText: 'Slide 2',
+    src: "images/backstage.jpeg",
+    altText: 'Up Close & Personal',
     caption: 'Backstage Access!',
     subCaption:''
 
   },
   {
     src: "images/concert3.jpeg",
-    altText: 'Slide 3',
+    altText: '',
     caption: 'Slide 3',
     subCaption:''
 
   },
+  {
+    src: "images/party_dj.jpeg",
+    altText: '',
+    caption: 'Enjoy the afterparty',
+    subCaption:''
+
+  }
 ];
 
 class MyCarousel extends Component {
@@ -78,7 +85,7 @@ class MyCarousel extends Component {
           key={item.src}
         >
           <img  className="carouselImg" src={item.src} alt={item.altText} />
-          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+          <CarouselCaption captionText={""} captionHeader={item.caption} />
         </CarouselItem>
       );
     });

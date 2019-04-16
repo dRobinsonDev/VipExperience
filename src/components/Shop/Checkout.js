@@ -83,7 +83,7 @@ export default class Checkout extends React.Component {
 				{ products.length ? <div className="text-center fullWidth"><h4><small>Total Amount:</small><span className="fullWidth text-primary ml1">${total}</span></h4><hr/></div>: ''}
 				{ !products.length ? <h3 className="text-warning">No item on the cart</h3>: ''}
 				<div className="flex flexRow fullWidth">
-					{ products.length ? <button className="btn checkout btn-success float-right" onClick={this.submitPayment}>Pay</button>: '' }
+					{ products.length ? <button className="btn checkout btn-success float-right" onClick={() => { alert('Proceed to Pay?'); window.location.href=window.location.origin;} }>Pay</button>: '' }
 					<Link to="/"><button className="btn btn-danger float-right" style={{ marginRight: "10px" }}>Cancel</button></Link>
 				</div>
 				<br/><br/><br/>

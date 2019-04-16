@@ -111,6 +111,9 @@ input:not([type="number"]){
   width: 78px;
   height: 38px;
 }
+.navColor > a {
+  font-family: 'Pacifico', cursive;
+}
 @media screen and (max-width: 400px) {
   .flex-event.info {
     height: 5em;

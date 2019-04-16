@@ -18,7 +18,7 @@
     background-color: white;
 }
 .blue {
-    background-color: blue !important;
+    background-color: #007bff !important;
 }
 @media screen and  (max-width: 500px) {
     #About {
