@@ -14,3 +14,21 @@
 .linkContainer a {
     margin: 0 auto;
 }
+.productContainer .card {
+      height: 400px !important;
+}
+
+@media screen and (max-width: 700px) {
+    .container.products {
+        flex-flow: column wrap;
+    }
+    .container.products .productContainer {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 991px) {
+
+    .container.products .card {
+        height: 450px !important;
+    }
+}

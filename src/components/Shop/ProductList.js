@@ -14,14 +14,14 @@ export default class ProductList extends React.Component {
 
 	componentWillMount() {
 		getProducts().then((products) => {
-				this.setState({ products });
+			this.setState({ products });
 	    });
 	}
 
 	render() {
 		const { products } =  this.state;
 		return (
-			<div className=" container">
+			<div className=" container products">
 				<h3 className=" fullWidth text-center card-title">List of Available Products</h3>
 				<div className="linkContainer">
 				<Link to="/checkout"><button className="btn btn-success float-right clear-both">Checkout</button></Link>

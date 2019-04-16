@@ -4,7 +4,7 @@ const products = [
       name: 'Stretch Limousine',
       price: 300,
       description: 'Elegant White Limousine',
-      image: 'images/vehicles/limousine1.jpeg',
+      image: 'images/Vehicles/limousine1.jpeg',
       type: 'Vehicle'
     },
     {
@@ -37,7 +37,7 @@ const products = [
       id: '05',
       name: 'White Limo w/ Blue neon lights',
       price: 400,
-      description: 'White Stretch limo with blue neon interior lights',
+      description: 'White limo neon interior lights',
       image: 'images/Vehicles/limousine2.jpeg',
       type: 'Vehicle'
     },
@@ -53,7 +53,7 @@ const products = [
       id: '07',
       name: 'Party Bus',
       price: 450,
-      description: 'Black Mega party bus that meets all your needs.',
+      description: 'Mega party Bus',
       image: 'images/Vehicles/partybus1.jpeg',
       type: 'Vehicle'
     },

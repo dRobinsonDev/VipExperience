@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './AboutPage.css'
 
@@ -16,7 +17,7 @@ export default class AboutPage extends React.Component {
             <h3>Why VIP Experiences?</h3>
             <p>We're as passionate about music as you are. We know that our VIP Experiences are better when its handled by top notch service from start to finish.</p>
             <p>If you're ready for the experience of your life? Then signup and become a VIP now</p> 
-            <button >Sign Up</button>
+            <Link to="/Signup"><button className="btn blue btn-default">Sign Up</button></Link>
         </div>
         )
     }

@@ -1,6 +1,23 @@
+html {
+    border: 2px solid blue;
+}
 .HeaderNav {
     margin-bottom: 2em;
 }
 .navColor {
     background-color: rgba(58,58,58,1);
+}
+.navbar {
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-bottom: 2px solid blue;
+}
+.logoText {
+    font-family: 'Pacifico', cursive;
+}
+@media screen and (max-width: 400px) {
+    .navbar-nav {
+        position: relative;
+        left: 2em;
+    }
 }

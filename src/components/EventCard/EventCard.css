@@ -1,3 +1,6 @@
+ .card {
+    border: 2px solid blue;
+}
 #eventContainer > div.card:hover {
     transform: scale(1.1);
     border: 2px solid rgba(51,58,64,1);
@@ -6,4 +9,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+}
+.card {
+    height: 450px !important;
 }

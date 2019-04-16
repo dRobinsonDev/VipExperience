@@ -3,16 +3,29 @@
     flex-flow: column nowrap;
     align-items: center;
     margin: 0 auto;
-    background-color: rgba(51,58,64,1);
+    background-color: rgba(58,58,58,1);
     color: white;
     padding: 0.925em;
     width: 80%;
-    font-family: fantasy;
     border-radius: 12px;
     font-size: 18px;
     letter-spacing: 2px;
+    border: 2px solid blue;
 }
+
 #About hr {
     width: 100%;
     background-color: white;
 }
+.blue {
+    background-color: blue !important;
+}
+@media screen and  (max-width: 500px) {
+    #About {
+        font-size: 24px !important;
+        text-align: center;
+    }
+    #About p {
+        font-size: 1.5em !important;
+    }
+  }

@@ -14,3 +14,32 @@
   width: 31%;
   margin: 0 auto;
 }
+.card-text {
+  width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  #Carousel {
+    width: 90%;
+}
+  .carouselImg {
+    width: 350px !important;
+    position: relative;
+    height: 200px !important;
+    left: 3%;
+  }
+  #Events {
+    flex-flow: column wrap;
+    margin: 0 ;
+  }
+  #Events #eventContainer {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .flex-event {
+    height: 5em;
+    width: 100%;
+    flex-flow: column wrap;
+    text-align: center;
+  }
+}

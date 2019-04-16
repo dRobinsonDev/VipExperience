@@ -1,12 +1,19 @@
+.html {
+  height: 100%;
+
+}
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-size: 16px !important;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(0,0,0,1);
+  color: white;
 }
 body.modal-open {
   overflow: hidden !important;
@@ -54,8 +61,8 @@ button:focus, .btn:focus {
 .card {
   margin: 0.925em !important;
   width: 100% !important;
-  height: 400px !important;
   align-items: center;
+  color: black;
 }
 .card-body {
   width: 100% !important;
@@ -85,7 +92,46 @@ button:focus, .btn:focus {
 .fullWidth {
   width: 100%;
 }
-/* .form-wrapper {
-  background-color: darkgray;
-} */
-/*todo style login signup form  */
+.ml1 {
+  margin-left: 1em;
+}
+.btn.btn-default {
+  background-color: lightblue;
+}
+input:not([type="number"]){
+  border: 2px solid blue;
+}
+.btn.btn-default {
+  background-color: #28a745;
+}
+.btn.disabled, .btn:disabled {
+  border: 1px solid red;
+}
+.btn.checkout {
+  width: 78px;
+  height: 38px;
+}
+@media screen and (max-width: 400px) {
+  .flex-event.info {
+    height: 5em;
+    width: 100%;
+    flex-flow: column wrap;
+    text-align: center !important;
+    align-items: inherit;
+  }
+  .flex-event .btn {
+    width: 178px;
+    height: 38px;
+  }
+  .card-text {
+    text-align: center;
+  }
+  .card-text .btn {
+    top: -0.3em;
+    position: relative;
+  }
+  .logo {
+    padding: .5rem 1rem;
+    font-size: 1.6em;
+  }
+}

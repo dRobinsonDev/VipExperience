@@ -25,6 +25,7 @@ export default class Cart extends React.Component {
 	
 	clearCart = () => {
 		localStorage.removeItem('cart');
+		localStorage.removeItem('tickets');
 		this.setState({products: []});
 	}
 
@@ -36,6 +37,7 @@ export default class Cart extends React.Component {
 		if (!cart) return; 
 		getCartItems(cart).then((products) => {
 			let cartQty = localStorage.getItem('cart');
+			cartQty = JSON.parse(cartQty);
 			for (let i = 0; i < products.length; i++) {
 				total += products[i].price * products[i].qty;
 			}
@@ -48,7 +50,6 @@ export default class Cart extends React.Component {
 				  }
 				}
 				if (!flag) {
-					cartQty = JSON.parse(cartQty);
 					products[products.length] = {
 						id: cur,
 						name: tickets[cur],
@@ -69,6 +70,10 @@ export default class Cart extends React.Component {
 		return (
 			<div className=" container cart">
 				<h3 className="card-title">Cart</h3>
+				<div className="linkContainer">
+				<Link to="/Checkout"><button className="btn btn-success float-right clear-both">Checkout</button></Link>
+				<Link to="/Products"><button className="btn btn-primary float-right" style={{  marginRight: "10px" }}>View Products</button></Link>
+				</div>
 				<hr/>
 				{
 					products.map((product, index) => <CartItem product={product} remove={this.removeFromCart} key={index}/>)

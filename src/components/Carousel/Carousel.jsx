@@ -11,14 +11,14 @@ import './Carousel.css';
 const items = [
   {
     src: "images/concert1.jpeg",
-    altText: 'Slide 1',
-    caption: 'Feel like a VIP',
+    altText: 'Feel like a VIP',
+    caption: 'Concerts in Style',
     subCaption:''
   },
   {
     src: "images/concert2.jpeg",
     altText: 'Slide 2',
-    caption: 'Slide 2',
+    caption: 'Backstage Access!',
     subCaption:''
 
   },

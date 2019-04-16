@@ -14,7 +14,6 @@ export default class EventCard extends React.Component {
 		let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : {};
 		let tickets = localStorage.getItem('tickets') ? JSON.parse(localStorage.getItem('tickets')) : {};
     let id = evt.id.toString();
-    console.log(evtQty);
     if(!evtQty) {
       evtQty = 1;
     } 
@@ -39,7 +38,7 @@ export default class EventCard extends React.Component {
             <img className="card-img-top" src={event.images[0].url} alt="Event Card Caption" />
             <div className="card-body">
               <h5 className="card-title">{event.name}</h5>
-              <div className='flex-event'>
+              <div className='flex-event info'>
                 <p className="card-text">Date: {event.dates.start.localDate} </p>
                 <p className="card-text">Time: {TimeUtility(event.dates.start.localTime)} </p>
               </div>
