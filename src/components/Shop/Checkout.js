@@ -1,6 +1,6 @@
 import React from 'react';
-import {  getCartItems } from '../../repository';
 import { Link } from 'react-router-dom';
+import {  getCartItems } from '../../repository';
 
 export default class Checkout extends React.Component {
 	constructor(props) {
@@ -10,15 +10,7 @@ export default class Checkout extends React.Component {
 			total: 0
 		}
 	}
-	submitPayment() {
-		console.log(this.state.total)
-		var submit = prompt("Are you sure you want to pay $");
 
-		if (submit) {
-			window.location.href="/";
-		}
-
-	}
 
 	componentWillMount() {
 		let cart = localStorage.getItem('cart');

@@ -1,5 +1,7 @@
 import React from 'react';
 import './ProductItem.css';
+
+
 export default class ProductItem extends React.Component {
 
 	constructor(props) {

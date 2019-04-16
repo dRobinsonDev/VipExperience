@@ -41,6 +41,9 @@ button:focus, .btn:focus {
   font-size: 18px;
   text-align: center;
 }
+small {
+  margin-right: 2.8em;
+}
 /*  UNIVERSAL CSS */
 .flex {
   display: flex;

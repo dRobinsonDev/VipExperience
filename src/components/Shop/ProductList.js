@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ProductItem from './ProductItem';
 import { getProducts } from '../../repository';
-
-import { Link } from 'react-router-dom';
 import './ProductList.css';
+
+
 export default class ProductList extends React.Component {
 	constructor(props) {
 		super(props);
