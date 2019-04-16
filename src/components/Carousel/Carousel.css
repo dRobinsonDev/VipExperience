@@ -1,3 +1,6 @@
+.blueBorder {
+    border: 2px solid blue;
+}
 .carouselImg {
     width: 800px !important;
     height: 400px !important;

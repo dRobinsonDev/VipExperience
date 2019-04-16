@@ -102,7 +102,7 @@ class MyCarousel extends Component {
     });
 
     return (
-      <Carousel
+      <Carousel className="blueBorder"
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
