@@ -3,8 +3,8 @@ The idea behind VIP Experiences is to provide music lovers, in or visiting the L
 
 ## Screenshots 
 <div style="display:flex;justify-content:center;">
-    <img src="screens/screen1.png" alt="VIP Experiences Screenshot" width="240" height="180" s border="10" />  
-    <img src="screens/screen2.png" alt="VIP Experiences Screenshot" width="240" height="180" border="10" />  
+    <img src="screens/screen1.png" alt="VIP Experiences Screenshot" width="240" height="180" style="border:10;margin-right:5px" />  
+    <img src="screens/screen2.png" alt="VIP Experiences Screenshot" width="240" height="180" style="border:10" />  
 </div>
   
   
