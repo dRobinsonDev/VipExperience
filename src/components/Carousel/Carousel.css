@@ -12,3 +12,8 @@
     left: 0 !important;
     right: 0 !important;
 }
+@media screen and (max-width: 860px) {
+    #Carousel {
+        width: 80% !important;
+    }
+}
