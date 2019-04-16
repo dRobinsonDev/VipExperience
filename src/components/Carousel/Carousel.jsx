@@ -1,4 +1,4 @@
-import  { React, Component } from 'react';
+import React, { Component } from 'react';
 import {
   Carousel,
   CarouselItem,
@@ -44,7 +44,7 @@ const items = [
   {
     src: "images/concert_fireworks.jpeg",
     altText: '',
-    caption: '',
+    caption: 'Spectactular Events',
     subCaption:''
   }
 ];
@@ -96,7 +96,7 @@ class MyCarousel extends Component {
           key={item.src}
         >
           <img  className="carouselImg" src={item.src} alt={item.altText} />
-          <CarouselCaption captionText={""} captionHeader={item.caption} />
+          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
         </CarouselItem>
       );
     });
