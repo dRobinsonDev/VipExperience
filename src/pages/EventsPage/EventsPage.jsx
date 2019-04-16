@@ -8,9 +8,6 @@ import './EventsPage.css'
 
 
 export default class EventsPage extends React.Component {
-    constructor(props) {
-        super(props);
-      }
     state = {
         events: null,
         showModal: false,

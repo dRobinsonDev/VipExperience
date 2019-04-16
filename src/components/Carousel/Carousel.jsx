@@ -25,7 +25,7 @@ const items = [
   {
     src: "images/concert3.jpeg",
     altText: '',
-    caption: 'Slide 3',
+    caption: 'Enjoy Lavish Events',
     subCaption:''
 
   },
@@ -34,7 +34,18 @@ const items = [
     altText: '',
     caption: 'Enjoy the afterparty',
     subCaption:''
-
+  },
+  {
+    src: "images/inside_party_bus2.jpeg",
+    altText: '',
+    caption: 'Party in our Mega Party Bus',
+    subCaption:''
+  },
+  {
+    src: "images/concert_fireworks.jpeg",
+    altText: '',
+    caption: '',
+    subCaption:''
   }
 ];
 

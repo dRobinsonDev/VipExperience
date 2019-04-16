@@ -1,15 +1,16 @@
  .card {
+    align-items: center;
     border: 2px solid blue;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 450px !important;
 }
 #eventContainer > div.card:hover {
-    transform: scale(1.1);
     border: 2px solid rgba(51,58,64,1);
+    transform: scale(1.1);
 }
 .flex-event {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
-}
-.card {
-    height: 450px !important;
 }

@@ -1,37 +1,11 @@
-const User = require('../models/user');
 const jwt = require('jsonwebtoken');
+const User = require('../models/user');
 const SECRET = process.env.SECRET;
 
 module.exports = {
-  signup,
   login,
-  updateInfo
+  signup,
 };
-
-
-function updateInfo(req, res){
-  User.findOne({_id: req.user._id}, (err, user) =>{
-    user.last_name= req.body.last_name;
-    user.age= req.body.age;
-    user.location= req.body.location;
-    user.description= req.body.description;
-    user.instruments= req.body.instruments;
-    user.save();
-    res.json(user);
-  })
-
-}
-
-async function signup(req, res) {
-  const user = new User(req.body);
-  try {
-    await user.save();
-    const token = createJWT(user);
-    res.json({ token });
-  } catch (err) {
-    res.status(400).json(err);
-  }
-}
 
 async function login(req, res) {
   try {
@@ -47,6 +21,17 @@ async function login(req, res) {
     });
   } catch (err) {
     return res.status(401).json(err);
+  }
+}
+
+async function signup(req, res) {
+  const user = new User(req.body);
+  try {
+    await user.save();
+    const token = createJWT(user);
+    res.json({ token });
+  } catch (err) {
+    res.status(400).json(err);
   }
 }
 

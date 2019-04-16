@@ -1,6 +1,6 @@
 import React from 'react';
 import {  getCartItems } from '../../repository';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class Checkout extends React.Component {
 	constructor(props) {

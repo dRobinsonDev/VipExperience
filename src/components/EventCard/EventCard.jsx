@@ -33,22 +33,24 @@ export default class EventCard extends React.Component {
         return new Date(a.dates.start.localDate) - new Date(b.dates.start.localDate)
       }).map((event, idx) => {
 
-          return <div id="eventContainer" key={event.id}>
-          <div className="card" style={{width: "18rem"}}>
-            <img className="card-img-top" src={event.images[0].url} alt="Event Card Caption" />
-            <div className="card-body">
-              <h5 className="card-title">{event.name}</h5>
-              <div className='flex-event info'>
-                <p className="card-text">Date: {event.dates.start.localDate} </p>
-                <p className="card-text">Time: {TimeUtility(event.dates.start.localTime)} </p>
+          return (
+            <div id="eventContainer" key={event.id}>
+              <div className="card" style={{width: "18rem"}}>
+                <img className="card-img-top" src={event.images[0].url} alt="Event Card Caption" />
+                <div className="card-body">
+                  <h5 className="card-title">{event.name}</h5>
+                  <div className='flex-event info'>
+                    <p className="card-text">Date: {event.dates.start.localDate} </p>
+                    <p className="card-text">Time: {TimeUtility(event.dates.start.localTime)} </p>
+                  </div>
+                  <p>Price: $200 a ticket</p>
+                </div>
+                <div className="flex-event">
+                  <button onClick={() =>this.addToCart(event, this.state[event.id] )} className="btn btn-primary">Buy A Ticket</button> &nbsp; &nbsp;
+                </div>
               </div>
-              <p>Price: $200 a ticket</p>
             </div>
-            <div className="flex-event">
-              <button onClick={() =>this.addToCart(event, this.state[event.id] )} className="btn btn-primary">Buy A Ticket</button> &nbsp; &nbsp;
-            </div>
-          </div>
-          </div>
+          )
       })
     );
   };

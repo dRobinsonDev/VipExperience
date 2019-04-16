@@ -61,8 +61,12 @@ button:focus, .btn:focus {
 .card {
   margin: 0.925em !important;
   width: 100% !important;
+  max-height: 100%;
   align-items: center;
   color: black;
+}
+.card:last-child {
+  
 }
 .card-body {
   width: 100% !important;
@@ -118,9 +122,12 @@ input:not([type="number"]){
   .flex-event.info {
     height: 5em;
     width: 100%;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     text-align: center !important;
     align-items: inherit;
+  }
+  .flex-event p.card-text {
+    width: 100%;
   }
   .flex-event .btn {
     width: 178px;
