@@ -58,6 +58,7 @@ export default class HeaderNav extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
+        <h1 className="text-center">Enjoy the best music events in Los Angeles</h1>
       </div>
     );
   }

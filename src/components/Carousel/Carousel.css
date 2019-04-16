@@ -16,4 +16,7 @@
     #Carousel {
         width: 80% !important;
     }
+    .carouselImg {
+        width: 100% !important;
+    }
 }
