@@ -20,7 +20,7 @@ NodeJS
 JWT (JSON Web Tokens)    
   
 ## Third Party Sources Used
-Ticketmaster API
+Ticketmaster API     
 React Shopping Cart ( 3rd party )  
   
 ## APP Links
@@ -35,4 +35,4 @@ Want to see the app in action?  click [here](https://vipexperiences.herokuapp.co
 Implement an improved shopping cart     
 Allow users to purchase more than one event ticket at a time    
 Integrate Redux    
-Improve User Interface
+Improve GUI (User Interface)

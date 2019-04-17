@@ -5,12 +5,11 @@ html {
     margin-bottom: 2em;
 }
 .navColor {
-    background-color: rgba(58,58,58,1);
+    background-color: rgba(40,40,40,1);
 }
 .navbar {
     border-bottom-left-radius: 18px;
     border-bottom-right-radius: 18px;
-    border-bottom: 2px solid blue;
 }
 .logoText {
     font-family: 'Pacifico', cursive;

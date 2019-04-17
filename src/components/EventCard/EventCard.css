@@ -5,7 +5,7 @@
     flex-flow: column nowrap;
     height: 450px !important;
 }
-#eventContainer > div.card:hover {
+.eventContainer > div.card:hover {
     border: 2px solid rgba(51,58,64,1);
     transform: scale(1.1);
 }
@@ -14,3 +14,17 @@
     flex-flow: row wrap;
     justify-content: center;
 }
+#Events {
+    display: flex;
+    flex-flow: row wrap;
+}
+@media screen and (max-width: 860px) {
+    #Events {
+      flex-flow: column wrap !important;
+    }
+    .eventContainer {
+        width: 50% !important;
+    }
+    
+  }
+  

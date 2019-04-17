@@ -121,14 +121,14 @@ input:not([type="number"]){
 .navColor > a {
   font-family: 'Pacifico', cursive;
 }
+.flex-event.info {
+  height: 5em;
+  width: 100%;
+  flex-flow: column nowrap;
+  text-align: center !important;
+  align-items: inherit;
+}
 @media screen and (max-width: 400px) {
-  .flex-event.info {
-    height: 5em;
-    width: 100%;
-    flex-flow: column nowrap;
-    text-align: center !important;
-    align-items: inherit;
-  }
   .flex-event p.card-text {
     width: 100%;
   }

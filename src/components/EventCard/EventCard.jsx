@@ -34,7 +34,7 @@ export default class EventCard extends React.Component {
       }).map((event, idx) => {
 
           return (
-            <div id="eventContainer" key={event.id}>
+            <div className="eventContainer" key={event.id}>
               <div className="card" style={{width: "18rem"}}>
                 <img className="card-img-top" src={event.images[0].url} alt="Event Card Caption" />
                 <div className="card-body">
