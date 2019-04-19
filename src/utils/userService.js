@@ -9,8 +9,8 @@ function getUser() {
 function login(creds) {
   return fetch(BASE_URL + 'login', {
     method: 'POST',
-	headers: new Headers({'Content-Type': 'application/json'}),
-	Authorization: "Bearer " + tokenService.getToken(),
+	  headers: new Headers({'Content-Type': 'application/json'}),
+    Authorization: "Bearer " + tokenService.getToken(),
     body: JSON.stringify(creds)
   })
   .then(res => {
