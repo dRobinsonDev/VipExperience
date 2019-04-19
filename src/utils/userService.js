@@ -37,9 +37,6 @@ function signup(user) {
   .then(({token}) => tokenService.setToken(token));
 }
 
-
-
-
 export default {
   getUser,
   login,

@@ -25,6 +25,10 @@
     .eventContainer {
         width: 50% !important;
     }
+    .card {
+        height: 500px !important;
+        overflow: auto;
+    }
     
   }
   

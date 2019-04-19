@@ -22,10 +22,10 @@
 }
 @media screen and  (max-width: 500px) {
     #About {
-        font-size: 24px !important;
         text-align: center;
+        padding: 0 27px;
     }
     #About p {
-        font-size: 1.5em !important;
+        font-size: 1em !important;
     }
   }
