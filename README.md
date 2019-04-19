@@ -9,15 +9,18 @@ The idea behind VIP Experiences is to provide music lovers, in or visiting the L
   
   
 ## Lessons Learned
-During this project I learned about React in general as this was my first project using React. Specifically I learned about React components, state and props. I also learned  to build a full-stack React application. I also learned how to integrate React with API data.  
+During this project I learned about React in general as this was my first project using React. Specifically I learned about React components, state and props. I also learned  to build a full-stack React application. I also learned how to integrate React with API data.
+
+
   
   
 ## Technologies Used
 MongoDB     
 Express     
 ReactJS     
-NodeJS      
-JWT (JSON Web Tokens)    
+NodeJS       
+JWT (JSON Web Tokens)      
+Reactstrap
   
 ## Third Party Sources Used
 Ticketmaster API          
