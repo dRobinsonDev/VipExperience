@@ -20,12 +20,11 @@ NodeJS
 JWT (JSON Web Tokens)    
   
 ## Third Party Sources Used
-Ticketmaster API     
-React Shopping Cart ( 3rd party )  
+Ticketmaster API          
+React Shopping Cart ( 3rd party )     
   
 ## APP Links
 Visit VIP Experiences Trello Board [here](https://trello.com/b/4vc6Hh5w/wdi-project-4)  
-Visit VIP Experiences Github Page [here](https://trello.com/b/4vc6Hh5w/wdi-project-4)  
 
 Want to see the app in action?  click [here](https://vipexperiences.herokuapp.com) 
 
