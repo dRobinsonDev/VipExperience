@@ -46,6 +46,7 @@ class App extends Component {
       <div>
         <HeaderNavBar 
         user={this.state.user}
+        handleLogout={this.handleLogout}
         />
         <Switch>
           <Route exact path='/' render={(props) =>

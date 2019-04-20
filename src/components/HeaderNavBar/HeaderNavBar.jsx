@@ -53,7 +53,7 @@ export default class HeaderNav extends React.Component {
               </NavItem> }
              { this.props.user && 
               <NavItem> 
-                < NavLink onClick={this.toggle} tag={RRNavLink} exact to="/">Logout</NavLink>
+                < NavLink onClick={this.props.handleLogout} tag={RRNavLink} exact to="/">Logout</NavLink>
               </NavItem> }
             </Nav>
           </Collapse>
