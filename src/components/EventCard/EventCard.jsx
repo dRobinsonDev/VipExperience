@@ -7,13 +7,16 @@ export default class EventCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      quantity: 1
+      quantity: {
+
+      }
     }
   }
   addToCart = (evt, evtQty) => {
 		let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : {};
 		let tickets = localStorage.getItem('tickets') ? JSON.parse(localStorage.getItem('tickets')) : {};
     let id = evt.id.toString();
+    console.log('QTY: ' + evtQty);
     if(!evtQty) {
       evtQty = 1;
     } 
@@ -46,7 +49,13 @@ export default class EventCard extends React.Component {
                   <p>Price: $200 a ticket</p>
                 </div>
                 <div className="flex-event">
-                  <button onClick={() =>this.addToCart(event, this.state[event.id] )} className="btn btn-primary">Buy A Ticket</button> &nbsp; &nbsp;
+                  <input type="number" placeholder="0" value={this.state.quantity[event.id]} name={`quantity${idx}`} onChange={this.handleInputChange} className="float-right" style={{ width: "60px", marginRight: "10px", borderRadius: "3px"}}/>
+                  <button onClick={() =>{
+                    this.addToCart(event, this.state[`quantity${idx}`])
+                    let currentQty = `quantity${idx}`;
+                    this.setState({ currentQty:  0})
+                    }} 
+                className="btn btn-primary">Buy A Ticket</button> &nbsp; &nbsp;
                 </div>
               </div>
             </div>
