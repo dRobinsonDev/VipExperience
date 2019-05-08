@@ -16,7 +16,6 @@ export default class EventCard extends React.Component {
 		let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : {};
 		let tickets = localStorage.getItem('tickets') ? JSON.parse(localStorage.getItem('tickets')) : {};
     let id = evt.id.toString();
-    console.log('QTY: ' + evtQty);
     if(!evtQty) {
       evtQty = 1;
     } 
@@ -25,17 +24,17 @@ export default class EventCard extends React.Component {
 		let qty = cart[id] + parseInt(evtQty);
 		cart[id] = qty;
 		localStorage.setItem('cart', JSON.stringify(cart));
-		localStorage.setItem('tickets', JSON.stringify(tickets));
+    localStorage.setItem('tickets', JSON.stringify(tickets));
+    this.setState({[id]: 0});
 	}
-
   handleInputChange = event => this.setState({[event.target.name]: event.target.value})
+  
 
   render() {
     return (
       this.props.events.sort((a,b) => {
         return new Date(a.dates.start.localDate) - new Date(b.dates.start.localDate)
       }).map((event, idx) => {
-
           return (
             <div className="eventContainer" key={event.id}>
               <div className="card" style={{width: "18rem"}}>
@@ -49,11 +48,11 @@ export default class EventCard extends React.Component {
                   <p>Price: $200 a ticket</p>
                 </div>
                 <div className="flex-event">
-                  <input type="number" placeholder="0" value={this.state.quantity[event.id]} name={`quantity${idx}`} onChange={this.handleInputChange} className="float-right" style={{ width: "60px", marginRight: "10px", borderRadius: "3px"}}/>
+                  <input type="number" placeholder="0" value={this.state[event.id] || 0} name={event.id} onChange={this.handleInputChange} className="float-right" style={{ width: "60px", marginRight: "10px", borderRadius: "3px"}}/>
                   <button onClick={() =>{
-                    this.addToCart(event, this.state[`quantity${idx}`])
-                    let currentQty = `quantity${idx}`;
-                    this.setState({ currentQty:  0})
+                    this.addToCart(event, this.state[event.id])
+                    let currentQty = event.id;
+                    this.setState({ currentQty:  null})
                     }} 
                 className="btn btn-primary">Buy A Ticket</button> &nbsp; &nbsp;
                 </div>
