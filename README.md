@@ -35,6 +35,6 @@ Want to see the app in action?  click [here](https://vipexperiences.herokuapp.co
 
 ## Future Improvements
 Implement an improved shopping cart     
-Allow users to purchase more than one event ticket at a time    
+~~Allow users to purchase more than one event ticket at a time~~
 Integrate Redux    
 Improve GUI (User Interface)
